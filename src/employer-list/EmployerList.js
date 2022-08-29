@@ -22,11 +22,10 @@ function EmployerList() {
         setSalaryValue(event.target.value)
     },[])
    
-    const deleteRow = React.useCallback((index) => {
-        let newList = employers.filter(item => (item.id !== index))
+    const deleteRow = (id) => {
+        let newList = employers.filter(item => (item.id !== id))
         setEmployer(newList)
-        console.log(newList);
-    },[])           
+    }
    
     const addEmployer = (event) => {
         event.preventDefault();
@@ -42,10 +41,8 @@ function EmployerList() {
                 surname:surnameValue,
                 salary:salaryValue
              }
-             employers.push(employer)
-            setEmployer(employers)
-            setEmployerId(employerId)
-
+             setEmployer([...employers, employer])
+            setEmployerId(employerId) 
         }
       
       
@@ -97,7 +94,7 @@ function EmployerList() {
             <tbody>
                 {employers.map((item,index) => (
                     <tr key={index}>
-                        <td id={index}><button onClick={() => deleteRow(index)}>Delete</button></td>
+                        <td id={index}><button onClick={() => deleteRow(item.id)}>Delete</button></td>
                         <td id={index}>{item.name}</td>
                         <td id={index} >{item.surname}</td>
                         <td id={index}>{item.salary}</td>

@@ -1,0 +1,77 @@
+#InputArea{
+    background-color: #1e3d69;
+    
+    color: #ffc13b;
+    padding: 10px 0 3rem 0;
+    .input-title{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .inputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        
+       
+        
+    }
+
+    .add-employer-button
+    {
+        display: block;
+        width: 30%;
+
+        margin-top: 10px;
+        margin: 25px auto;
+
+        button{
+            width: 100%;
+            background-color: #ffc13b;
+            color: #000;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            padding: 6px 0px;
+        }
+    }
+}
+
+
+.epmloyer-name,.epmloyer-surname,.epmloyer-salary{
+    margin-left: 14px;
+
+    label{
+        margin-right: 5px;
+    }
+    input{
+        background-color: #f5f0e1;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        
+    }
+}
+
+
+#EmployerTableSection{
+    background-color: #1e3d69;
+    height: 345px;
+    color: #fff;
+    
+    .employer-table{
+        width: 50%;
+        margin: 0 auto;
+      thead{
+        background-color: #ea6153;
+      }
+      
+
+        
+    }
+
+}
